@@ -1,0 +1,42 @@
+<form class="form-container" #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+   <div class="form-control">
+        <label for="fname">First Name:</label>
+        <input type="text" name="name" ngModel class="form-control">
+    </div>
+    <div class="form-control">
+        <label for="lname">Last Name:</label>
+        <input type="text" name="username" ngModel class="form-control">
+    </div>
+    <div class="form-control">
+        <label for="lname">Email:</label>
+        <input type="email" name="email" ngModel class="form-control">
+    </div>
+ 
+      <div class="form-control">
+       <button type="submit" value="Submit" class="btn btn-info btn-style">Submit</button>
+     <!--   <button type="button" value="update" class="btn btn-info btn-style" (click)="updateRecord()">Update</button> -->
+       <button class="btn btn-info btn-style" (click)="getDataService()">Get Data</button>
+       <button class="btn btn-info btn-style" type="reset">Reset</button>
+    </div>
+
+
+</form> 
+
+<table class="table table-primary" >
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let data of formData">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.username}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.address.city}}</td>
+        <td><button class="btn btn-info btn-style" type="button" (click)="delData(data.id)">Delete</button></td>
+    </tr>
+</table>

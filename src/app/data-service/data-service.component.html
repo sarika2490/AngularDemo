@@ -1,0 +1,44 @@
+<!-- <form class="form-container" #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+    <div class="form-control">
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" ngModel class="form-control">
+    </div>
+    <div class="form-control">
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" ngModel class="form-control">
+    </div>
+    <div class="form-control">
+       <input type="submit" value="Submit">
+    </div>
+
+
+</form> -->
+<!-- {{data | json}} -->
+<table class="table table-primary tablestyle">
+   
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Branch</th>
+    </tr>
+    <tr *ngFor="let dt of data">
+        <td>{{dt.empId}}</td>
+        <td>{{dt.name}}</td>
+        <td>{{dt.Branch}}</td>
+    </tr>
+</table>
+
+<table class="table table-primary tablestyle">
+   
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>UserId</th>
+    </tr>
+    <tr *ngFor="let dt2 of senddata">
+        <td>{{dt2.id}}</td>
+        <td>{{dt2.title}}</td>
+        <td>{{dt2.userId}}</td>
+        
+    </tr>
+</table>

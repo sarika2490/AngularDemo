@@ -1,0 +1,101 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.content {
+    width: 50%;
+    margin: 0px auto;
+    background-color: rgb(160, 151, 151);
+    padding: 50px;
+}
+
+.content p {
+    color: rgb(10, 9, 9);
+    font-size: 20px;
+    text-align: left;
+}
+
+.content a {
+    color: blue;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 50px
+}
+
+h2 {
+    color: red;
+    font-size: 24px
+}
+
+.btn {
+    background-color: antiquewhite;
+    color: rgb(7, 7, 7);
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+input {
+    height: 30px;
+    padding: 2px;
+    margin-left: 0px;
+    width: 100%;
+    height: 40px;
+}
+
+.form-container {
+    width: 100%;
+    margin: 0px auto;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border-radius: 10px
+}
+
+.heading h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.form-container input {
+    width: 100%;
+    margin-left: 30px;
+    margin: 10px 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.submit {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 55px;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-right: 10px;
+    border: none;
+}
+
+.displaydata {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 80px
+}
+
+.displaydata table tr td {
+    border: 1px solid #f2f2f2;
+    width: 200px;
+    padding: 10px
+}
+
+.displaydata table tr th {
+    border: 1px solid #f2f2f2;
+    width: 200px;
+    padding: 10px
+}
+.gen{margin-top: 20px;}
+.gen input {
+    width: 20px !important;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+}

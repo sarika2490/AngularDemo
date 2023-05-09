@@ -1,0 +1,75 @@
+<div class="content">
+    <h1>Registration Form</h1>
+    <form name="registrationForm" #myForm="ngForm" (ngSubmit)="myForm.form.valid && onSubmit(myForm)" class="form-container">
+        <div class="form-group">
+            <input type="hidden" name="id" #idd="ngModel"  [(ngModel)]="hiddenId" ngModel>
+        </div>
+        <div class="form=group">
+            <label for="firstname">First Name : </label>
+            <input type="text" name="fname" class="form-control" [(ngModel)]="fn" #firstname="ngModel" ngModel required [ngClass]="{'is-invalid':myForm.submitted && firstname.invalid}">
+            <div *ngIf="myForm.submitted && firstname.invalid" class="invalid-feedback"> First Name is required.</div>
+        </div>
+        <div class="form=group">
+            <label for="lastname">Last Name : </label>
+            <input type="text" name="lname" class="form-control" [(ngModel)]="ln" #lastname="ngModel" ngModel>
+        </div>
+        <div class="form=group">
+            <label for="email">Email : </label>
+            <input type="text" name="email" class="form-control" [(ngModel)]="em" #eml="ngModel" ngModel>
+        </div>
+        <div class="form=group">
+            <label for="password">Password : </label>
+            <input type="password" name="Password" class="form-control" [(ngModel)]="ps" #pass="ngModel" ngModel>
+        </div>
+        <div class="form=group">
+            <label for="cpasssword">Confirm Password: </label>
+            <input type="password" name="cPassword" class="form-control" [(ngModel)]="cps" #cpass="ngModel" ngModel>
+        </div>
+        <div class="form=group">
+            <label for="course">Course: </label>
+            <select name="course" #crs="ngModel" ngModel class="form-control" [(ngModel)]="cr">
+                <option *ngFor="let crs of course">{{crs}}</option>
+            </select>
+        </div>
+        <div class="form=group gen">
+            <label for="gender">Gender:&nbsp;&nbsp; </label>
+            <input type="radio" name="gender" value="Male" class="radio" #gen="ngModel" ngModel [(ngModel)]="gn">&nbsp;Male
+            <input type="radio" name="gender" value="Female" class="radio" #gen="ngModel" ngModel [(ngModel)]="gn">&nbsp;Female
+
+        </div>
+
+        <div class="form=group">
+            <button type="submit" class="submit">Submit</button>
+            <button type="button" class="submit" (click)="onUp(myForm)">Update</button>
+            <button type="reset" class="submit">Reset</button>
+        </div>
+    </form>
+</div>
+
+<div class="displaydata">
+    <table *ngIf="showFlag" border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Confirm Password</th>
+            <th>Course</th>
+            <th>Gender</th>
+        </tr>
+        <tr *ngFor="let data of allData">
+            <td>{{data.fname}}</td>
+            <td>{{data.lname}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.Password}}</td>
+            <td>{{data.cPassword}}</td>
+            <td>{{data.course}}</td>
+            <td>{{data.gender}}</td>
+            <td><button  class="btn warning" (click)="onDel(data)" type="button">Delete</button></td>
+            
+            <td><button  class="btn danger" (click)="onUpdate(data)">Update</button></td>
+        </tr>
+
+    </table>
+
+</div>

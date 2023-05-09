@@ -1,0 +1,32 @@
+<!-- Data Bindings -->
+
+<!-- String Interpolation -->
+
+<div class="content">
+    <h2 class=""> String Interpolation</h2>
+    <p>{{str}}</p>
+  
+    <!-- built in pipe -->
+    <h2 class=""> built in pipe</h2>
+    <p>{{str | uppercase}}</p>
+    <p>{{str | titlecase}}</p>
+    <p>{{str | lowercase}}</p>
+  
+    <br /><br>
+  
+    <h2 class="">  Property/Attribute binding</h2>
+    <a [href]="link" [target]="tar">Go to Google</a>
+  
+    <br /><br>
+  
+    <h2 class="">  Event binding</h2>
+    <button type= "button" class="btn" (click)="onClick()">Submit</button>
+  
+    <br /><br>
+  
+    <h2 class="">  Two Way data binding</h2>
+    <input type="text" name="firstname" [(ngModel)]="fname">
+  
+    <p>Your name is : {{fname}}</p> 
+  
+  </div>

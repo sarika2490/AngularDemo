@@ -1,0 +1,6 @@
+.content{width:50%; margin: 0px auto; background-color: black; padding: 50px;}
+.content p{color: rgb(255, 255, 255); font-size: 20px; text-align: left; }
+.content a{color: blue; font-size: 20px; text-align: left; margin-top:50px}
+h2{color: red; font-size:24px}
+.btn{background-color: antiquewhite; color:rgb(7, 7, 7); border: none; padding: 10px; font-size: 18px;}
+input{height:30px; padding: 2px;}
